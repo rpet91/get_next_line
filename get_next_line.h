@@ -6,7 +6,7 @@
 /*   By: rpet <marvin@codam.nl>                       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/01/03 15:11:18 by rpet          #+#    #+#                 */
-/*   Updated: 2020/01/09 08:58:33 by rpet          ########   odam.nl         */
+/*   Updated: 2020/01/09 14:38:15 by rpet          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,10 @@
 
 int		get_next_line(int fd, char **line);
 int		strlen_gnl(char *str);
+int		strchr_gnl(char *str);
 char	*strdup_gnl(char *str);
+void	strcpy_gnl(char *dst, char *src, int line);
 char	*strjoin_gnl(char *s1, char *s2);
-int		strchr_gnl(char *str, char c);
-char	*substr_gnl(char *str);
+
 
 #endif
