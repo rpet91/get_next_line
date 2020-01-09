@@ -1,0 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   get_next_line.h                                    :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: rpet <marvin@codam.nl>                       +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2020/01/03 15:11:18 by rpet          #+#    #+#                 */
+/*   Updated: 2020/01/09 08:58:33 by rpet          ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 32
+# endif
+
+int		get_next_line(int fd, char **line);
+int		strlen_gnl(char *str);
+char	*strdup_gnl(char *str);
+char	*strjoin_gnl(char *s1, char *s2);
+int		strchr_gnl(char *str, char c);
+char	*substr_gnl(char *str);
+
+#endif
