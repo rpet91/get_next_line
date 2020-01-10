@@ -6,7 +6,7 @@
 /*   By: rpet <marvin@codam.nl>                       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/01/03 16:04:52 by rpet          #+#    #+#                 */
-/*   Updated: 2020/01/09 08:00:19 by rpet          ########   odam.nl         */
+/*   Updated: 2020/01/10 09:35:25 by rpet          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,22 +32,22 @@ int		main(void)
 	ret = 1;
 	ret_end = 1;
 	i = 0;
-	while (ret == 1)
+/*	while (ret == 1)
 	{
-		ret = get_next_line(fd1, &line);
+		ret = get_next_line(fd2, &line);
 		printf("GNL: [%i] %s\n", ret, line);
-		printf("--------------------------------------------\n");
 		i++;
 		free(line);
-	}
-/*	while (ret == 1 && ret_end == 1)
+	}*/
+	while (ret == 1 || ret_end == 1)
 	{
 		ret = ret_end;
 		cur_fd = (i % 2 == 1) ? fd1 : fd2;
 		ret_end = get_next_line(cur_fd, &line);
-		printf("FD%i: [%i] %s\n", cur_fd, ret, line);
+		printf("FD%i: [%i] %s\n", cur_fd, ret_end, line);
 		i++;
 		free(line);
-	}*/
+	}
+//	while (1);
 	return (0);
 }
